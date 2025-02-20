@@ -1,0 +1,14 @@
+{
+  "name": "blog-migration-poc",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0"
+  }
+}
