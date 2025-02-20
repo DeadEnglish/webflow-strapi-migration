@@ -7,11 +7,12 @@ const faqFile = "faqs.csv";
 
 const parsedFileName = "parsedFaqs.json";
 
+/** normalise the headers as webflow allows them to be capitalised strings with spaces*/
 function normaliseHeader(header: string) {
   return header.replace(/ /g, "_").toLowerCase();
 }
 
-/** Function to parse CSV. currently using FAQs but can also be used for blogs */
+/** parse CSV to json. currently using FAQs but can also be used for blogs */
 function parseFaqs() {
   const result: unknown[] = [];
 
@@ -28,7 +29,7 @@ function parseFaqs() {
     });
 }
 
-/** Funciton to import FAQs into strapi using the api */
+/** import FAQs into strapi using the api */
 async function importFaqs() {
   // read file
   const file = Bun.file(parsedFileName);
